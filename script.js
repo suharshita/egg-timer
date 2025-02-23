@@ -2,17 +2,10 @@ let countdown;
 let timeLeft = 0;
 let isRunning = false;
 
-let eggImages = {
-    soft: "soft-egg.png",
-    medium: "medium-egg.png",
-    hard: "hard-egg.png"
-};
-
 // Set the timer based on egg type but don't start yet
-function setTimer(seconds, eggType) {
+function setTimer(seconds) {
     stopTimer(); // Reset timer if switching eggs
     timeLeft = seconds;
-    document.getElementById("eggImage").src = eggImages[eggType];
     updateTimerDisplay(timeLeft);
 }
 
@@ -25,11 +18,13 @@ function startTimer() {
 
     countdown = setInterval(() => {
         timeLeft = Math.round((then - Date.now()) / 1000);
+        
         if (timeLeft <= 0) {
             clearInterval(countdown);
             alert("🥚🍳 Your egg is ready! Enjoy! 🍽️");
             isRunning = false;
         }        
+
         updateTimerDisplay(timeLeft);
     }, 1000);
 }
