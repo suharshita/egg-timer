@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥚 Cute Egg Timer ⏳</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🥚 Cute Egg Timer ⏳</h1>
+        <div class="buttons">
+            <button onclick="setTimer(5 * 60, 'soft')">🥚 Soft Egg</button>
+            <button onclick="setTimer(8 * 60, 'medium')">🍳 Medium Egg</button>
+            <button onclick="setTimer(11 * 60, 'hard')">🥚🔥 Hard Egg</button>
+        </div>        
+        <div class="egg-display">
+            <img id="eggImage" src="soft-egg.png" alt="Egg">
+        </div>
+        <p id="timer">00:00</p>
+        <div class="control-buttons">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
