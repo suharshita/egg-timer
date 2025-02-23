@@ -10,14 +10,14 @@
     <div class="container">
         <h1>🥚 Cute Egg Timer ⏳</h1>
         <div class="buttons">
-            <button onclick="setTimer(5 * 60, 'soft')">🥚 Soft Egg</button>
-            <button onclick="setTimer(8 * 60, 'medium')">🍳 Medium Egg</button>
-            <button onclick="setTimer(11 * 60, 'hard')">🥚🔥 Hard Egg</button>
-        </div>        
-        <div class="egg-display">
-            <img src="https://in.pinterest.com/pin/365143482308544148/" alt="Egg Timer">
-
+            <button onclick="setTimer(5 * 60, 'soft')">Soft Egg</button>
+            <button onclick="setTimer(8 * 60, 'medium')">Medium Egg</button>
+            <button onclick="setTimer(11 * 60, 'hard')">Hard Egg</button>
         </div>
+        <div class="egg-display">
+            <img id="eggImage" src="egg.jpg" alt="Egg">
+        </div>
+        
         <p id="timer">00:00</p>
         <div class="control-buttons">
             <button onclick="startTimer()">Start</button>
@@ -27,3 +27,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
