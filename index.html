@@ -14,17 +14,39 @@
             <button onclick="setTimer(8 * 60, 'medium')">Medium Egg</button>
             <button onclick="setTimer(11 * 60, 'hard')">Hard Egg</button>
         </div>
+        
+        <div class="custom-timer">
+            <label for="minutes">Custom Timer:</label>
+            <input type="number" id="minutes" min="0" max="60" placeholder="Min">
+            <span>:</span>
+            <input type="number" id="seconds" min="0" max="59" placeholder="Sec">
+            <button onclick="setCustomTimer()">Set</button>
+        </div>
+        
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+        
         <div class="egg-display">
             <img id="eggImage" src="egg.jpg" alt="Egg">
         </div>
         
         <p id="timer">00:00</p>
         <div class="control-buttons">
-            <button onclick="startTimer()">Start</button>
-            <button onclick="stopTimer()">Stop</button>
+            <button id="startBtn" onclick="startTimer()">Start</button>
+            <button id="pauseBtn" onclick="pauseTimer()">Pause</button>
+            <button id="stopBtn" onclick="stopTimer()">Reset</button>
+        </div>
+        
+        <div class="egg-tips">
+            <h3>🍳 Egg-cellent Tips 🍳</h3>
+            <ul>
+                <li>Use room temperature eggs for best results</li>
+                <li>Add a little vinegar to help with peeling</li>
+                <li>Dunk in ice water after cooking to stop the cooking process</li>
+            </ul>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
